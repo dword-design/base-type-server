@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@dword-design/base-type-lib@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-type-lib/-/base-type-lib-0.1.4.tgz#2ccde97f9a7385a8270d0c6011e62587389dd4b4"
-  integrity sha512-Uj69USxIc/2TEpWJ/oxjqhBxajaCfoIpoEyJeShf5GGFdkD3eQNEFVV+EgV4mIJ7jKbrMkyd52SauA62/9s8ag==
+"@dword-design/base-type-lib@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-type-lib/-/base-type-lib-0.1.5.tgz#e8802de188edb5598635796aaddc12966ceea656"
+  integrity sha512-td/gpEUdCXf0ESGslsAvsrzTFeAPtIwLl8cXJlr5OfNH6a/3TwVhQoRCIceg7uy6jWbeKDBiLtNmuYGct7/lCg==
   dependencies:
     "@dword-design/node-env" "^0.1.0"
     child-process-promise "^2.2.1"
@@ -13,8 +13,8 @@
     fs-extra "^8.0.1"
     html-webpack-plugin "^3.2.0"
     lodash "^4.17.11"
-    module-exists "^0.2.1"
     nodemon "^1.19.1"
+    safe-require "^1.0.3"
     webpack "^4.33.0"
     webpack-cli "^3.3.2"
     webpack-merge "^4.2.1"
@@ -2261,11 +2261,6 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
-module-exists@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/module-exists/-/module-exists-0.2.1.tgz#1b93531e1bd31c7c0fbb92e859c2a6f0870a0ba8"
-  integrity sha512-Qrb/jPRB9LLdtK/37Gmr5ijTCg2q8SmbFDIYhjiS/SiL67ussbKPMbFVdErOBG1TZWZCjSusIfBHaY1iY0YznA==
-
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -2728,6 +2723,11 @@ prepend-http@^1.0.1:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+prettier@^1.17.0:
+  version "1.18.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
+  integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
+
 pretty-error@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-2.1.1.tgz#5f4f87c8f91e5ae3f3ba87ab4cf5e03b1a17f1a3"
@@ -3016,6 +3016,11 @@ safe-regex@^1.1.0:
   integrity sha1-QKNmnzsHfR6UPURinhV91IAjvy4=
   dependencies:
     ret "~0.1.10"
+
+safe-require@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/safe-require/-/safe-require-1.0.3.tgz#6ec319ed10209b1d12c7a1449b79d46d7f4f914b"
+  integrity sha1-bsMZ7RAgmx0Sx6FEm3nUbX9PkUs=
 
 "safer-buffer@>= 2.1.2 < 3":
   version "2.1.2"
@@ -3596,9 +3601,9 @@ watchpack@^1.5.0:
     neo-async "^2.5.0"
 
 webpack-cli@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.2.tgz#aed2437b0db0a7faa2ad28484e166a5360014a91"
-  integrity sha512-FLkobnaJJ+03j5eplxlI0TUxhGCOdfewspIGuvDVtpOlrAuKMFC57K42Ukxqs1tn8947/PM6tP95gQc0DCzRYA==
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.3.tgz#8b7587dee369a838eb4722f6cfa711c779011e5f"
+  integrity sha512-/qBxTvsxZ7bIFQtSa08QRY5BZuiJb27cbJM/nzmgXg9NEaudP20D7BruKKIuWfABqWoMEJQcNYYq/OxxSbPHlg==
   dependencies:
     chalk "^2.4.1"
     cross-spawn "^6.0.5"
@@ -3608,6 +3613,7 @@ webpack-cli@^3.3.2:
     import-local "^2.0.0"
     interpret "^1.1.0"
     loader-utils "^1.1.0"
+    prettier "^1.17.0"
     supports-color "^5.5.0"
     v8-compile-cache "^2.0.2"
     yargs "^12.0.5"
