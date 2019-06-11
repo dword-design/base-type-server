@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
-    "@dword-design/base-type-lib": "^0.1.8",
+    "@dword-design/base-type-lib": "^0.1.9",
     "@dword-design/node-env": "^0.1.0",
     "child-process-promise": "^2.2.1"
   }

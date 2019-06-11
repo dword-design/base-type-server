@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@dword-design/base-type-lib@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-type-lib/-/base-type-lib-0.1.8.tgz#878443278c1e2e10e41193739c284a47c49ae2ed"
-  integrity sha512-wEj1s7E83hRjmvWUIEfKvKWtnBPPBClpkroE4yaRiibqjfiOra4ureph2Q2geSQnBsCywTmg7snsioxJ4uEZjw==
+"@dword-design/base-type-lib@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-type-lib/-/base-type-lib-0.1.9.tgz#837a02e14d21f4e17dbce90cd021bb022e17ed1a"
+  integrity sha512-VRA6/arbWvNEMRUM6bt7Lpt543Ua1ZjMm2y0sMjqAMNGW+LdtILmCH0YvO6rtRG+myCdFOTIYuQVYMThgcUdmQ==
   dependencies:
     "@dword-design/node-env" "^0.1.0"
     child-process-promise "^2.2.1"
