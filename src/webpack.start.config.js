@@ -1,7 +1,8 @@
 import webpackMerge from 'webpack-merge'
 import baseConfig from './webpack.config'
-import { spawn } from 'child-process-promise'
-import resolveBin from 'resolve-bin'
+import { spawn } from 'child_process'
+
+let serverProcess = undefined
 
 export default webpackMerge(
   baseConfig,
@@ -9,7 +10,12 @@ export default webpackMerge(
     plugins: [
       {
         apply: compiler => compiler.hooks.afterEmit
-          .tap('BaseServerPlugin', () => spawn(resolveBin.sync('nodemon'), ['dist/cli.js', '--watch', 'dist'], { stdio: 'inherit' })),
+          .tap('BaseServerPlugin', () => {
+            if (serverProcess !== undefined) {
+              serverProcess.kill()
+            }
+            serverProcess = spawn('node', ['dist/cli.js'], { stdio: 'inherit' })
+          }),
       },
     ],
   }
