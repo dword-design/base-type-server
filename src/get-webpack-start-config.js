@@ -1,11 +1,11 @@
 import webpackMerge from 'webpack-merge'
-import baseConfig from './webpack.config'
+import getWebpackConfig from './get-webpack-config'
 import { spawn } from 'child_process'
 
 let serverProcess = undefined
 
-export default webpackMerge(
-  baseConfig,
+export default args => webpackMerge(
+  getWebpackConfig(args),
   {
     plugins: [
       {

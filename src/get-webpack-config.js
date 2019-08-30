@@ -3,8 +3,8 @@ import { getWebpackConfig as getLibConfig } from '@dword-design/base-type-lib'
 import fs from 'fs-extra'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-export default webpackMerge(
-  getLibConfig(),
+export default args => webpackMerge(
+  getLibConfig(args),
   {
     entry: {
       cli: './src/cli.js',

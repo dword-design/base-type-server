@@ -1,19 +1,21 @@
 import nodeEnv from '@dword-design/node-env'
 import { spawn } from 'child-process-promise'
 import { run, watch } from '@dword-design/webpack-runner'
+import getWebpackConfig from './get-webpack-config'
+import getWebpackStartConfig from './get-webpack-start-config'
 
-const build = {
-  name: 'build',
-  handler: () => run(require('./webpack.config').default),
-}
+const build = args => run(getWebpackConfig(args))
 
 export const commands = [
-  build,
+  {
+    name: 'build',
+    handler: build,
+  },
   {
     name: 'start',
-    handler: () => nodeEnv === 'production'
+    handler: args => nodeEnv === 'production'
       ? Promise.resolve()
-        .then(build.handler)
+        .then(() => build(args))
         .then(() => spawn('forever', ['restart', 'dist/server.js'], { stdio: 'inherit' }))
         .catch(error => {
           if (error.name === 'ChildProcessError') {
@@ -22,6 +24,6 @@ export const commands = [
             throw(error)
           }
         })
-      : watch(require('./webpack.start.config').default),
+      : watch(getWebpackStartConfig(args)),
   },
 ]
