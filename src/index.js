@@ -10,8 +10,16 @@ let serverProcess = undefined
 
 const prepare = async () => {
   await remove('dist')
-  await spawn(resolveBin.sync('eslint'), ['--config', require.resolve(eslintConfigFilename), '--ignore-path', '.gitignore', '.'], { stdio: 'inherit' })
-  await spawn(resolveBin.sync('@babel/cli', { executable: 'babel' }), ['--out-dir', 'dist', '--config-file', require.resolve(babelConfigFilename), 'src'], { stdio: 'inherit' })
+  await spawn(
+    resolveBin.sync('eslint'),
+    ['--config', require.resolve(eslintConfigFilename), '--ignore-path', '.gitignore', '.'],
+    { stdio: 'inherit' }
+  )
+  await spawn(
+    resolveBin.sync('@babel/cli', { executable: 'babel' }),
+    ['--out-dir', 'dist', '--config-file', require.resolve(babelConfigFilename), '--copy-files', 'src'],
+    { stdio: 'inherit' }
+  )
 }
 
 export default () => base({

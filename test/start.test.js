@@ -35,12 +35,12 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
   try {
     await waitForChange(join('dist', 'index.js'))
     expect(require(resolve('dist'))).toEqual(1)
-    await delay(500)
+    await delay(700)
     expect(await readFile('foo.txt', 'utf8')).toEqual('1')
     await outputFile(join('src', 'index.js'), 'export default 2')
     await waitForChange(join('dist', 'index.js'))
     expect(importFresh(resolve('dist'))).toEqual(2)
-    await delay(500)
+    await delay(700)
     expect(await readFile('foo.txt', 'utf8')).toEqual('2')
   } finally {
     childProcess.kill()
