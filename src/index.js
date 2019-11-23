@@ -1,29 +1,55 @@
-import nodeEnv from '@dword-design/node-env'
-import { spawn } from 'child-process-promise'
-import { run, watch } from '@dword-design/webpack-runner'
-import getWebpackConfig from './get-webpack-config'
-import getWebpackStartConfig from './get-webpack-start-config'
+import nodeEnv from 'node-env'
+import { spawn } from 'child_process'
+import { base, babelConfigFilename, eslintConfigFilename } from '@dword-design/base'
+import { remove } from 'fs'
+import resolveBin from 'resolve-bin'
+import chokidar from 'chokidar'
+import debounce from 'debounce'
 
-const build = args => run(getWebpackConfig(args))
+let serverProcess = undefined
 
-export const commands = [
-  {
-    name: 'build',
-    handler: build,
+const prepare = async () => {
+  await remove('dist')
+  await spawn(resolveBin.sync('eslint'), ['--config', require.resolve(eslintConfigFilename), '--ignore-path', '.gitignore', '.'], { stdio: 'inherit' })
+  await spawn(resolveBin.sync('@babel/cli', { executable: 'babel' }), ['--out-dir', 'dist', '--config-file', require.resolve(babelConfigFilename), 'src'], { stdio: 'inherit' })
+}
+
+export default () => base({
+  prepare,
+  start: async () => {
+    if (nodeEnv === 'production') {
+      await prepare()
+      try {
+        await spawn('forever', ['restart', 'dist/cli.js'], { stdio: 'inherit' })
+      } catch (error) {
+        if (error.name === 'ChildProcessError') {
+          return spawn('forever', ['start', 'dist/cli.js'], { stdio: 'inherit' })
+        } else {
+          throw(error)
+        }
+      }
+    } else {
+      return chokidar
+        .watch('src')
+        .on(
+          'all',
+          debounce(
+            async () => {
+              try {
+                await prepare()
+                if (serverProcess !== undefined) {
+                  serverProcess.kill()
+                }
+                serverProcess = spawn('node', ['dist/cli.js'], { stdio: 'inherit' }).childProcess
+              } catch (error) {
+                if (error.name !== 'ChildProcessError') {
+                  console.log(error)
+                }
+              }
+            },
+            200
+          )
+        )
+    }
   },
-  {
-    name: 'start',
-    handler: args => nodeEnv === 'production'
-      ? Promise.resolve()
-        .then(() => build(args))
-        .then(() => spawn('forever', ['restart', 'dist/server.js'], { stdio: 'inherit' }))
-        .catch(error => {
-          if (error.name === 'ChildProcessError') {
-            return spawn('forever', ['start', 'dist/server.js'], { stdio: 'inherit' })
-          } else {
-            throw(error)
-          }
-        })
-      : watch(getWebpackStartConfig(args)),
-  },
-]
+})
