@@ -722,43 +722,43 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@dword-design/aliases@^0.1.1", "@dword-design/aliases@^0.1.2", "@dword-design/aliases@^0.1.3":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@dword-design/aliases/-/aliases-0.1.4.tgz#0b36bffac4487d78dd0d25605157104cb529a958"
-  integrity sha512-7SPXpvyTDg9YnUM9xvZjImDSeWdcnKnyCQtOxYganT0Qm73+6bPYwzXaXoLgvPH9xTCNjsvoKfM+f54ddrNp0A==
+"@dword-design/aliases@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/aliases/-/aliases-1.0.0.tgz#23af4e46d8ca39d8df5ed2b220382721418a777e"
+  integrity sha512-i6AeJ2qqNRB8OsQnmwdaJlvbBKH+tcIRnwYepRL1hASeCXh313yVDIGec+4GwuVtuOBIPWwxoq4EzsNYsgevbQ==
   dependencies:
-    "@dword-design/functions" "^0.7.13"
+    "@dword-design/functions" "^1.0.0"
     better-node-env "^1.0.3"
     child-process-promise "^2.2.1"
     eslint "^6.6.0"
     fs-extra "^8.1.0"
     get-package-name "^1.0.0"
 
-"@dword-design/babel-config@^0.2.0", "@dword-design/babel-config@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-0.2.1.tgz#41588a754a7b60e497d2606dcd940c8caf16c3a2"
-  integrity sha512-soubs3UDL875yL174QhkUWBM35pMycBjKQM1SuMlI9tRvTyH258xmlCj2t+ExmANOzKT0UKDjtPdNuWcgodsmg==
+"@dword-design/babel-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.0.0.tgz#82b30acbf8c5fad45eb1b754de44e5109e057c55"
+  integrity sha512-IRg1JOaUTJlhAjVkiyA6nnKpJrNNufsbfuIMaPjZUaWvI1Sfyi4lc0nusxxMsm5vHZc4gFvFaTIJR0UR8Q1Taw==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
     "@babel/plugin-proposal-optional-chaining" "^7.6.0"
     "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
     "@babel/preset-env" "^7.6.3"
-    "@dword-design/aliases" "^0.1.1"
+    "@dword-design/aliases" "^1.0.0"
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-module-resolver "^3.2.0"
     babel-plugin-transform-imports "^2.0.0"
 
 "@dword-design/base@^1.1.9":
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-1.1.9.tgz#f3a098289d17e8cd65c59a6a3272dde84571e43f"
-  integrity sha512-yMc3ajlCUa1gij8cGmTJV6/eQZRbr/iB9fOvw8OOmFAMJWMYJN+BlyPj4s77N+OHxqjMZwIN1U7lvoiUAX0waQ==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-1.2.0.tgz#df839624683d0c5a113e5d532df3df923bb22c0a"
+  integrity sha512-A8rDFcUj3f2XnoUMnsWeeGHoz6phR/K9N/Y2xXUsY0Xgs4V9NhUF1OCQDAau//NmAvt8yijrdRZCQRyedtTmRA==
   dependencies:
     "@babel/cli" "^7.6.4"
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
-    "@dword-design/aliases" "^0.1.3"
-    "@dword-design/babel-config" "^0.2.1"
-    "@dword-design/eslint-config" "^0.3.5"
+    "@dword-design/aliases" "^1.0.0"
+    "@dword-design/babel-config" "^1.0.0"
+    "@dword-design/eslint-config" "^1.0.0"
     chokidar "^3.2.3"
     debounce "^1.2.0"
     depcheck dword-design/depcheck#fork
@@ -774,13 +774,13 @@
     resolve-bin "^0.4.0"
     safe-require "^1.0.3"
 
-"@dword-design/eslint-config@^0.3.5":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-0.3.6.tgz#28a0b608bea5c5f9feabb85ee4c36745d6c037af"
-  integrity sha512-VuFWFV/TePh0MP+KzsO/fvQ4htc7EKJoIBJN3N17+98XuOl4lyjij3p2FEKUw+vLNTQpAgNvECymXKIbf/WsOA==
+"@dword-design/eslint-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-1.0.0.tgz#2d79d94c6d0e644a44c8126c7ee1a8c43a21bc06"
+  integrity sha512-Z+dm5R44U/k9ueh/HNcQK17uYaynZJClBSyPJDvFChGoCSMEUl1BsdPjy00pDcMaF92+G2KaiS2C/C04o4YQrg==
   dependencies:
-    "@dword-design/aliases" "^0.1.2"
-    "@dword-design/babel-config" "^0.2.0"
+    "@dword-design/aliases" "^1.0.0"
+    "@dword-design/babel-config" "^1.0.0"
     babel-eslint "^11.0.0-beta.0"
     eslint-import-resolver-babel-module "^5.1.0"
     eslint-plugin-import "^2.18.2"
@@ -788,10 +788,10 @@
     get-package-name "^1.0.0"
     safe-require "^1.0.3"
 
-"@dword-design/functions@^0.7.13":
-  version "0.7.13"
-  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-0.7.13.tgz#60fe1fdff1c021e5ff8e87749eceeda7be87b0d8"
-  integrity sha512-tI2Wzwol/hQ11vxdsqB97EgN0Fsul3WWbfkFwopN8yiVgtY5ySAixc4VX1gUxJLPTOe2bJBHeLGpPc9m7vie7Q==
+"@dword-design/functions@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-1.0.0.tgz#f292dfb8c15aa002c4a84054b5b7fd3b9602d4b0"
+  integrity sha512-C3kMSXuiQ+kNKDEyeyJj27YbkjJSvLG/vwnexb0HI7otPvAaJ2b4c00CtkeipiWI3larRc3U7e9uoE6dXaXDrg==
   dependencies:
     endent "^1.3.0"
     lodash "^4.17.15"
@@ -873,9 +873,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.12.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.11.tgz#bec2961975888d964196bf0016a2f984d793d3ce"
-  integrity sha512-O+x6uIpa6oMNTkPuHDa9MhMMehlxLAd5QcOvKRjAFsBVpeFWTOPnXbDvILvFgFFZfQ1xh1EZi1FbXxUix+zpsQ==
+  version "12.12.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.12.tgz#529bc3e73dbb35dd9e90b0a1c83606a9d3264bdb"
+  integrity sha512-MGuvYJrPU0HUwqF7LqvIj50RZUX23Z+m583KBygKYUZLlZ88n6w28XRNJRJgsHukLEnLz6w6SvxZoLgbr5wLqQ==
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
