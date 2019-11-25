@@ -1,7 +1,10 @@
 {
   "name": "@dword-design/base-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
+  "repository": "dword-design/base-server",
+  "description": "",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
   "bin": {
     "base-server": "./dist/cli.js"
   },
@@ -29,5 +32,13 @@
     "output-files": "^1.1.7",
     "wait-for-change": "^1.1.1",
     "with-local-tmp-dir": "^2.2.1"
+  },
+  "maintainers": [],
+  "contributors": [
+    "Renovate Bot (http://renovatebot.com)",
+    "dword-design (http://www.dword-design.de)"
+  ],
+  "bugs": {
+    "url": "https://github.com/dword-design/base-server/issues"
   }
 }
