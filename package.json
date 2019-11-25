@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "repository": "dword-design/base-server",
   "description": "",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
   "bin": {
     "base-server": "./dist/cli.js"
   },
@@ -32,7 +33,6 @@
     "wait-for-change": "^1.1.1",
     "with-local-tmp-dir": "^2.2.1"
   },
-  "author": "",
   "maintainers": [],
   "contributors": [
     "Renovate Bot (http://renovatebot.com)",
