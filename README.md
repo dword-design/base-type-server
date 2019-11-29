@@ -49,7 +49,7 @@
 
 Unless stated otherwise all works are:
 
-
+<ul><li>Copyright &copy; Sebastian Landwehr</li></ul>
 
 and licensed under:
 
