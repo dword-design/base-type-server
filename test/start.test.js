@@ -6,7 +6,6 @@ import importFresh from 'import-fresh'
 import { resolve, join } from 'path'
 import outputFiles from 'output-files'
 import { outputFile, readFile } from 'fs'
-import resolveBin from 'resolve-bin'
 import { endent } from '@functions'
 import delay from 'delay'
 import { minimalProjectConfig } from '@dword-design/base'
@@ -25,7 +24,7 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
     `,
   })
 
-  const childProcess = await spawn(resolveBin.sync('@dword-design/base-server', { executable: 'base-server' }), ['start'])
+  const childProcess = await spawn('base-server', ['start'])
     .catch(error => {
       if (error.code !== null) {
         throw error
