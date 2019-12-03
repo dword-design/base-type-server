@@ -2,7 +2,7 @@ import { spawn } from 'child_process'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import expect from 'expect'
 import waitForChange from 'wait-for-change'
-import importFresh from 'import-fresh'
+import stealthyRequire from 'stealthy-require'
 import { resolve, join } from 'path'
 import outputFiles from 'output-files'
 import { outputFile, readFile } from 'fs'
@@ -38,7 +38,7 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
     expect(await readFile('foo.txt', 'utf8')).toEqual('1')
     await outputFile(join('src', 'index.js'), 'export default 2')
     await waitForChange(join('dist', 'index.js'))
-    expect(importFresh(resolve('dist'))).toEqual(2)
+    expect(stealthyRequire(require.cache, () => require(resolve('dist')))).toEqual(2)
     await delay(700)
     expect(await readFile('foo.txt', 'utf8')).toEqual('2')
   } finally {
