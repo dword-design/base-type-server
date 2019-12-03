@@ -20,7 +20,7 @@
   "dependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
-    "@dword-design/base": "^1.1.9",
+    "@dword-design/base": "^2.0.0",
     "chokidar": "^3.3.0",
     "debounce": "^1.2.0",
     "resolve-bin": "^0.4.0"
