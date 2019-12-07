@@ -1,44 +1,41 @@
 {
   "name": "@dword-design/base-server",
   "version": "1.0.3",
-  "main": "dist/index.js",
-  "repository": "dword-design/base-server",
   "description": "",
-  "author": "Sebastian Landwehr <info@dword-design.de>",
-  "bin": {
-    "base-server": "./dist/cli.js"
+  "bugs": {
+    "url": "https://github.com/dword-design/base-server/issues"
   },
+  "repository": "dword-design/base-server",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "contributors": [
+    "Renovate Bot (http://renovatebot.com)",
+    "dword-design (http://www.dword-design.de)"
+  ],
   "files": [
     "dist"
   ],
-  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "base-server": "./dist/cli.js"
+  },
   "scripts": {
-    "prepare": "base prepare",
+    "prepublishOnly": "base build",
     "start": "base start",
     "test": "base test"
   },
   "dependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
-    "@dword-design/base": "^1.1.9",
+    "@dword-design/base": "^3.0.0",
     "chokidar": "^3.3.0",
-    "debounce": "^1.2.0",
-    "resolve-bin": "^0.4.0"
+    "debounce": "^1.2.0"
   },
   "devDependencies": {
-    "delay": "^4.3.0",
     "expect": "^24.9.0",
-    "import-fresh": "^3.2.1",
     "output-files": "^1.1.7",
-    "wait-for-change": "^1.1.1",
+    "wait-on": "^3.3.0",
     "with-local-tmp-dir": "^2.2.1"
   },
-  "maintainers": [],
-  "contributors": [
-    "Renovate Bot (http://renovatebot.com)",
-    "dword-design (http://www.dword-design.de)"
-  ],
-  "bugs": {
-    "url": "https://github.com/dword-design/base-server/issues"
-  }
+  "maintainers": []
 }

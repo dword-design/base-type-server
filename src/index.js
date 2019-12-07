@@ -1,32 +1,23 @@
 import nodeEnv from 'node-env'
 import { spawn } from 'child_process'
-import { base, babelConfigFilename, eslintConfigFilename } from '@dword-design/base'
+import { base } from '@dword-design/base'
 import { remove } from 'fs'
-import resolveBin from 'resolve-bin'
 import chokidar from 'chokidar'
 import debounce from 'debounce'
 
 let serverProcess = undefined
 
-const prepare = async () => {
+const build = async () => {
   await remove('dist')
-  await spawn(
-    resolveBin.sync('eslint'),
-    ['--config', require.resolve(eslintConfigFilename), '--ignore-path', '.gitignore', '.'],
-    { stdio: 'inherit' }
-  )
-  await spawn(
-    resolveBin.sync('@babel/cli', { executable: 'babel' }),
-    ['--out-dir', 'dist', '--config-file', require.resolve(babelConfigFilename), '--copy-files', 'src'],
-    { stdio: 'inherit' }
-  )
+  await spawn('eslint', ['--ignore-path', '.gitignore', '.'], { stdio: 'inherit' })
+  await spawn('babel', ['--out-dir', 'dist', '--copy-files', 'src'], { stdio: 'inherit' })
 }
 
 export default () => base({
-  prepare,
+  build,
   start: async () => {
     if (nodeEnv === 'production') {
-      await prepare()
+      await build()
       try {
         await spawn('forever', ['restart', 'dist/cli.js'], { stdio: 'inherit' })
       } catch (error) {
@@ -44,7 +35,7 @@ export default () => base({
           debounce(
             async () => {
               try {
-                await prepare()
+                await build()
                 if (serverProcess !== undefined) {
                   serverProcess.kill()
                 }
