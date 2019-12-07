@@ -742,9 +742,9 @@
     read-all-up "^1.0.1"
 
 "@dword-design/babel-config@^1.0.0":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.0.3.tgz#6efa4a87f283bc19e17539cef70dc779cccc46bc"
-  integrity sha512-C93QAXFLwjGVewy40+jvTfMfYTxjwRqJx/umYaN3pr6Dac2XEzqhfT1NMVIwxi9aZLfqYml6IpBidIBfx4lrxg==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.0.4.tgz#ed1e452f58d9b48db3f1f9e7a2288f5f87f3eb1c"
+  integrity sha512-soo9OrAPxrxfjiuO3LlZWBs/ThsamHnjGW/c4ETjJdTia4+yydw9wzQAIELrwRDM6mCI6/Dpr+gq0vTyvgo1WA==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
     "@babel/plugin-proposal-optional-chaining" "^7.6.0"
@@ -1422,6 +1422,7 @@ chardet@^0.7.0:
 
 chdir@dword-design/node-chdir#fork:
   version "0.0.0"
+  uid "55004473579e2b8d293ced5410af5948793971b6"
   resolved "https://codeload.github.com/dword-design/node-chdir/tar.gz/55004473579e2b8d293ced5410af5948793971b6"
 
 child-process-promise@^2.2.1:
@@ -1814,6 +1815,7 @@ delegates@^1.0.0:
 
 depcheck@dword-design/depcheck#fork:
   version "0.0.1"
+  uid "9947160b51e73cadbd92716544f758ab07f215cd"
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/9947160b51e73cadbd92716544f758ab07f215cd"
   dependencies:
     "@babel/parser" "^7.6.4"
