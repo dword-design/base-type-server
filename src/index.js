@@ -1,20 +1,26 @@
 import nodeEnv from 'node-env'
 import { spawn } from 'child_process'
-import { base } from '@dword-design/base'
-import { remove } from 'fs'
+import { outputFile, remove } from 'fs'
 import chokidar from 'chokidar'
 import debounce from 'debounce'
+import getPackageName from 'get-package-name'
 
 let serverProcess = undefined
 
-const build = async () => {
-  await remove('dist')
+const lint = async () => {
+  await outputFile('.eslintrc.json', JSON.stringify({ extends: getPackageName(require.resolve('@dword-design/eslint-config')) }, undefined, 2) + '\n')
   await spawn('eslint', ['--ignore-path', '.gitignore', '.'], { stdio: 'inherit' })
+}
+
+const build = async () => {
+  await lint()
+  await remove('dist')
   await spawn('babel', ['--out-dir', 'dist', '--copy-files', 'src'], { stdio: 'inherit' })
 }
 
-export default () => base({
+export default {
   build,
+  lint,
   start: async () => {
     if (nodeEnv === 'production') {
       await build()
@@ -51,4 +57,4 @@ export default () => base({
         )
     }
   },
-})
+}

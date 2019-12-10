@@ -1,11 +1,11 @@
 {
-  "name": "@dword-design/base-server",
+  "name": "@dword-design/base-config-server",
   "version": "1.0.3",
   "description": "",
   "bugs": {
-    "url": "https://github.com/dword-design/base-server/issues"
+    "url": "https://github.com/dword-design/base-config-server/issues"
   },
-  "repository": "dword-design/base-server",
+  "repository": "dword-design/base-config-server",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "contributors": [
@@ -16,9 +16,6 @@
     "dist"
   ],
   "main": "dist/index.js",
-  "bin": {
-    "base-server": "./dist/cli.js"
-  },
   "scripts": {
     "prepublishOnly": "base build",
     "start": "base start",
@@ -28,12 +25,17 @@
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@dword-design/base": "^3.0.0",
+    "@dword-design/eslint-config": "^1.2.0",
     "chokidar": "^3.3.0",
-    "debounce": "^1.2.0"
+    "debounce": "^1.2.0",
+    "get-package-name": "^1.0.0"
   },
   "devDependencies": {
     "expect": "^24.9.0",
+    "glob-promise": "^3.4.0",
     "output-files": "^1.1.7",
+    "sort-package-json": "^1.30.0",
+    "stealthy-require": "^1.1.1",
     "wait-on": "^3.3.0",
     "with-local-tmp-dir": "^2.2.1"
   },
