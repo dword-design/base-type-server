@@ -729,7 +729,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@dword-design/aliases@^2.0.0":
+"@dword-design/aliases@^2.0.0", "@dword-design/aliases@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@dword-design/aliases/-/aliases-2.0.1.tgz#a8621c70c435959bb92d32a9fd351e5215637b3f"
   integrity sha512-LdQhQ7cWzpsuaWA0w3jz97okqQ1+cSyhHkaeP0fbsxTuTK+PdWHRTs4Qk7kP+zeMddhKOgT0nNNaxk/wG8kkcg==
@@ -756,29 +756,30 @@
     babel-plugin-transform-imports "^2.0.0"
 
 "@dword-design/base-config-node@^1.0.0":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.2.1.tgz#126c0f89b1afde3ace2b9fea7bcac9599a04ae5f"
-  integrity sha512-/sBHa74qIkH2HX7gX1TseVLthtvX687dWZbqXtZ+zbSt75c/VH+qOogajfjQAUp8j7mk6Lm+GvkpZIF0dU0RlA==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.3.0.tgz#75d8ec185dc7e85c392f8d593c98c5d14d1e91c1"
+  integrity sha512-pyXb9cFfSSvqPZDYVmgeLzS1s8Oyl62BudltUMIfunDRubRYRPEoge0xpZMdzmBN0IrwAD3jUKoW7TzhJEUYNQ==
   dependencies:
     "@babel/cli" "^7.7.5"
     "@babel/core" "^7.7.5"
+    "@dword-design/aliases" "^2.0.1"
     "@dword-design/babel-config" "^1.0.4"
     "@dword-design/eslint-config" "^1.2.0"
     chokidar "^3.3.0"
     debounce "^1.2.0"
+    depcheck dword-design/depcheck#fork
     eslint "^6.7.2"
     get-package-name "^1.0.0"
 
 "@dword-design/base@^3.0.0":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-3.3.2.tgz#88963865e3c7314ae0f2fde23d398d43a6a64f06"
-  integrity sha512-tJrngUNcS5fnXdHUWSh/Wi+HEUGJ/7lZeMqScqe6b51J0nD+wz5mAiTDbofNjaRQ7Ewztbs3UGpQM12BW0h95A==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-3.4.0.tgz#455270a5435f63888ea60c15287aa154af7ff585"
+  integrity sha512-XjBHyd/bltUWCzwRxDvKc8TN27oirUi/0MF9+vhgtbq7Gz7ntT3v4+ZLnvSxRMW2UUYmBs0+lx6LZQVdkBjMhA==
   dependencies:
     "@babel/cli" "^7.6.4"
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
     "@dword-design/aliases" "^2.0.0"
-    "@dword-design/babel-config" "^1.0.0"
     "@dword-design/base-config-node" "^1.0.0"
     "@dword-design/json-schema-package" "^1.0.0"
     ajv-cli "^3.0.0"
@@ -934,9 +935,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.12.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.16.tgz#3ebcbd7bf978fa4c5120fee8be57083271a8b3ac"
-  integrity sha512-vRuMyoOr5yfNf8QWxXegOjeyjpWJxFePzHzmBOIzDIzo+rSqF94RW0PkS6y4T2+VjAWLXHWrfbIJY3E3aS7lUw==
+  version "12.12.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.17.tgz#191b71e7f4c325ee0fb23bc4a996477d92b8c39b"
+  integrity sha512-Is+l3mcHvs47sKy+afn2O1rV4ldZFU7W8101cNlOd+MRbjM4Onida8jSZnJdTe/0Pcf25g9BNIUsuugmE6puHA==
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
@@ -1205,12 +1206,12 @@ aws4@^1.8.0:
   integrity sha512-Uvq6hVe90D0B2WEnUqtdgY1bATGz3mw33nH9Y+dmA+w5DHvUmBgkr5rM/KCHpCsiFNRUfokW/szpPPgMK2hm4A==
 
 babel-eslint@^11.0.0-beta.0:
-  version "11.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-11.0.0-beta.1.tgz#1762faffeaee26877761b9a19af43cef679999a4"
-  integrity sha512-4xDIJZUn6RDNfSfKmrywNT+e37srxxPP+GdciWakL5U36fde3/K7Y/X8XyEquXGQz02tPvzRuF6SNrR61uZ+fA==
+  version "11.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-11.0.0-beta.2.tgz#de1f06795aa0d8cedcf6ac943e63056f5b4a7048"
+  integrity sha512-D2tunrOu04XloEdU2XVUminUu25FILlGruZmffqH5OSnLDhCheKNvUoM1ihrexdUvhizlix8bjqRnsss4V/UIQ==
   dependencies:
-    eslint-scope "3.7.1"
-    eslint-visitor-keys "^1.0.0"
+    eslint-scope "5.0.0"
+    eslint-visitor-keys "^1.1.0"
     semver "^6.3.0"
 
 babel-plugin-add-module-exports@^1.0.2:
@@ -1433,6 +1434,7 @@ chardet@^0.7.0:
 
 chdir@dword-design/node-chdir#fork:
   version "0.0.0"
+  uid "55004473579e2b8d293ced5410af5948793971b6"
   resolved "https://codeload.github.com/dword-design/node-chdir/tar.gz/55004473579e2b8d293ced5410af5948793971b6"
 
 child-process-promise@^2.2.1:
@@ -1820,6 +1822,7 @@ delegates@^1.0.0:
 
 depcheck@dword-design/depcheck#fork:
   version "0.0.1"
+  uid b581cc5d85247e7fa5fbf8a682b00aa738eae3cf
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/b581cc5d85247e7fa5fbf8a682b00aa738eae3cf"
   dependencies:
     "@babel/parser" "^7.6.4"
@@ -1857,6 +1860,11 @@ detect-libc@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+
+detect-newline@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
+  integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
 diff-match-patch@^1.0.4:
   version "1.0.4"
@@ -1904,11 +1912,11 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 editions@^2.1.0, editions@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/editions/-/editions-2.2.0.tgz#dacd0c2a9441ebef592bba316a6264febb337f35"
-  integrity sha512-RYg3iEA2BDLCNVe8PUkD+ox5vAKxB9XS/mAhx1bdxGCF0CpX077C0pyTA9t5D6idCYA3avl5/XDHKPsHFrygfw==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/editions/-/editions-2.3.0.tgz#47f2d5309340bce93ab5eb6ad755b9e90ff825e4"
+  integrity sha512-jeXYwHPKbitU1l14dWlsl5Nm+b1Hsm7VX73BsrQ4RVwEcAQQIPFHTZAbVtuIGxZBrpdT2FXd8lbtrNBrzZxIsA==
   dependencies:
-    errlop "^1.1.2"
+    errlop "^2.0.0"
     semver "^6.3.0"
 
 editorconfig@^0.15.3:
@@ -1945,12 +1953,10 @@ endent@^1.3.0:
     fast-json-parse "^1.0.3"
     objectorarray "^1.0.3"
 
-errlop@^1.1.2:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/errlop/-/errlop-1.7.0.tgz#6b1b35528f3056002ea560906617191fcf6d9fea"
-  integrity sha512-JisgQc08Ry4ZzN4cTYL7wdmLMoiwv97Kj/xSXObOE9Be+ZDxAewq0kKRqR5WFVUhglym3fQc++sZSMvdgLalBw==
-  dependencies:
-    editions "^2.2.0"
+errlop@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/errlop/-/errlop-2.0.0.tgz#52b97d35da1b0795e2647b5d2d3a46d17776f55a"
+  integrity sha512-z00WIrQhtOMUnjdTG0O4f6hMG64EVccVDBy2WwgjcF8S4UB1exGYuc2OFwmdQmsJwLQVEIHWHPCz/omXXgAZHw==
 
 error-ex@^1.2.0, error-ex@^1.3.1:
   version "1.3.2"
@@ -2055,15 +2061,7 @@ eslint-plugin-prefer-arrow@^1.1.6:
   resolved "https://registry.yarnpkg.com/eslint-plugin-prefer-arrow/-/eslint-plugin-prefer-arrow-1.1.7.tgz#4534dd8d2e519cd579a951f95802137365d524a2"
   integrity sha512-epsA4g804mRovlOHSbeO1xxW7REGeUjULRME9MJTJDOVscNIA01AkR66TP4cmHDfD+w72EQ9cPhf37MbZiFI2w==
 
-eslint-scope@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
-  integrity sha1-PWPD7f2gLgbgGkUq2IyqzHzctug=
-  dependencies:
-    esrecurse "^4.1.0"
-    estraverse "^4.1.1"
-
-eslint-scope@^5.0.0:
+eslint-scope@5.0.0, eslint-scope@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.0.0.tgz#e87c8887c73e8d1ec84f1ca591645c358bfc8fb9"
   integrity sha512-oYrhJW7S0bxAFDvWqzvMPRm6pcgcnWc4QnofCAqRTRfQC0JcwenzGglTtsLyIuuWFfkqDG9vz67cnttSd53djw==
@@ -2078,7 +2076,7 @@ eslint-utils@^1.4.3:
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
-eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
+eslint-visitor-keys@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
@@ -4717,16 +4715,17 @@ snapdragon@^0.8.1:
     use "^3.1.0"
 
 sort-object-keys@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.2.tgz#d3a6c48dc2ac97e6bc94367696e03f6d09d37952"
-  integrity sha1-06bEjcKsl+a8lDZ2luA/bQnTeVI=
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.3.tgz#bff833fe85cab147b34742e45863453c1e190b45"
+  integrity sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==
 
 sort-package-json@^1.22.1, sort-package-json@^1.30.0:
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.30.0.tgz#bd7df0261ff10d3708f587defd9fcf81ff0569ec"
-  integrity sha512-1QMmOyfurS1X6PfIGqZTYcGjuCKxki4uMwzw87oAwPQiQeaDdgI7eE5bZN5CSFU5P3Hc2UgV5o4e+wIuhueoOg==
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.31.0.tgz#778c652b1ee88c15337b258d3ae7e47576e4fb88"
+  integrity sha512-zBdnTpMCJNZszbPcAbGIAgfRQ0A0dF/ZOsQdUHICZ6XLuIQK1Mcwp8zfkF3ySg2lT2oKxU4dVhh/9tZxGLBU0A==
   dependencies:
     detect-indent "^6.0.0"
+    detect-newline "3.1.0"
     glob "^7.1.6"
     sort-object-keys "^1.1.2"
 
