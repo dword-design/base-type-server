@@ -772,14 +772,15 @@
     get-package-name "^1.0.0"
 
 "@dword-design/base@^3.0.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-3.4.0.tgz#455270a5435f63888ea60c15287aa154af7ff585"
-  integrity sha512-XjBHyd/bltUWCzwRxDvKc8TN27oirUi/0MF9+vhgtbq7Gz7ntT3v4+ZLnvSxRMW2UUYmBs0+lx6LZQVdkBjMhA==
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-3.4.2.tgz#8297f0d029c6d5318c3c2099c4be4c36ca30c056"
+  integrity sha512-nHtro3y09q3R1ultR1Im9JopAp5yjq31bTLMNO+3AIg2IUAG+BKNFvXUtRR1eAgiKG6kaNB4QHRZ7p8qhpSftQ==
   dependencies:
     "@babel/cli" "^7.6.4"
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
     "@dword-design/aliases" "^2.0.0"
+    "@dword-design/babel-config" "^1.0.4"
     "@dword-design/base-config-node" "^1.0.0"
     "@dword-design/json-schema-package" "^1.0.0"
     ajv-cli "^3.0.0"
@@ -1434,7 +1435,6 @@ chardet@^0.7.0:
 
 chdir@dword-design/node-chdir#fork:
   version "0.0.0"
-  uid "55004473579e2b8d293ced5410af5948793971b6"
   resolved "https://codeload.github.com/dword-design/node-chdir/tar.gz/55004473579e2b8d293ced5410af5948793971b6"
 
 child-process-promise@^2.2.1:
@@ -1822,7 +1822,6 @@ delegates@^1.0.0:
 
 depcheck@dword-design/depcheck#fork:
   version "0.0.1"
-  uid b581cc5d85247e7fa5fbf8a682b00aa738eae3cf
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/b581cc5d85247e7fa5fbf8a682b00aa738eae3cf"
   dependencies:
     "@babel/parser" "^7.6.4"
