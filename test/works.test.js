@@ -1,4 +1,4 @@
-import { spawn } from 'child_process'
+import { spawn } from 'child-process-promise'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import expect from 'expect'
 import P from 'path'
@@ -7,8 +7,8 @@ import { minimalPackageConfig, minimalProjectConfig } from '@dword-design/base'
 import waitOn from 'wait-on'
 import glob from 'glob-promise'
 import sortPackageJson from 'sort-package-json'
-import { endent } from '@functions'
-import { outputFile } from 'fs'
+import { endent } from '@dword-design/functions'
+import { outputFile } from 'fs-extra'
 import stealthyRequire from 'stealthy-require'
 
 export const it = async () => {

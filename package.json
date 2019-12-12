@@ -22,11 +22,15 @@
     "@babel/core": "^7.7.4",
     "@dword-design/base": "^3.0.0",
     "@dword-design/eslint-config": "^1.2.0",
+    "better-node-env": "^1.0.3",
+    "child-process-promise": "^2.2.1",
     "chokidar": "^3.3.0",
     "debounce": "^1.2.0",
+    "fs-extra": "^8.1.0",
     "get-package-name": "^1.0.0"
   },
   "devDependencies": {
+    "@dword-design/functions": "^2.2.2",
     "expect": "^24.9.0",
     "glob-promise": "^3.4.0",
     "output-files": "^1.1.7",
