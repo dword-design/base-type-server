@@ -729,7 +729,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@dword-design/babel-config@^1.0.0", "@dword-design/babel-config@^1.0.4":
+"@dword-design/babel-config@^1.0.0", "@dword-design/babel-config@^1.0.4", "@dword-design/babel-config@^1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.0.8.tgz#ac0d496020de7fb24c6e91b4a1f7ba9d91e7076c"
   integrity sha512-AFj28z0jB9DvwWcu3cjIQ22YlGue6dTOLf02r/oRXjBwql1Q7q3cSRwCPOXQ9qRY5jQDSGSirQ5djnihCYuhBA==
@@ -1437,7 +1437,6 @@ chardet@^0.7.0:
 
 chdir@dword-design/node-chdir#fork:
   version "0.0.0"
-  uid "55004473579e2b8d293ced5410af5948793971b6"
   resolved "https://codeload.github.com/dword-design/node-chdir/tar.gz/55004473579e2b8d293ced5410af5948793971b6"
 
 child-process-promise@^2.2.1:
@@ -1825,7 +1824,6 @@ delegates@^1.0.0:
 
 depcheck@dword-design/depcheck#fork:
   version "0.0.1"
-  uid c26892d97de67e476566ece801a046dbd718f21b
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/c26892d97de67e476566ece801a046dbd718f21b"
   dependencies:
     "@babel/parser" "^7.6.4"

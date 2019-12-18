@@ -15,7 +15,7 @@ const lint = async () => {
 const build = async () => {
   await lint()
   await remove('dist')
-  await spawn('babel', ['--out-dir', 'dist', '--copy-files', 'src'], { stdio: 'inherit' })
+  await spawn('babel', ['--out-dir', 'dist', '--copy-files', '--config-file', getPackageName(require.resolve('@dword-design/babel-config')), 'src'], { stdio: 'inherit' })
 }
 
 export default {

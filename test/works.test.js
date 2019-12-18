@@ -21,7 +21,7 @@ export const it = async () => {
         '@dword-design/base-config-server': '^1.0.0',
       },
     }), undefined, 2),
-    'src/index.js': 'export default \'foo\'',
+    'src/index.js': 'export default 1 |> x => x * 2',
     src: {
       'cli.js': endent`
         #!/usr/bin/env node
@@ -50,7 +50,7 @@ export const it = async () => {
       'README.md',
       'src',
     ])
-    expect(require(P.resolve('dist'))).toEqual('foo')
+    expect(require(P.resolve('dist'))).toEqual(2)
     expect(stdout).toEqual(endent`
       Copying config files …
       Updating README.md …
@@ -64,7 +64,7 @@ export const it = async () => {
       .catch(error => {
         expect(error.stdout).toEqual(endent`
           Successfully compiled 2 files with Babel.
-          foo
+          2
           Successfully compiled 2 files with Babel.
           bar
         ` + '\n')
