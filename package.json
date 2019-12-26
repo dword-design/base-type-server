@@ -20,6 +20,7 @@
   "dependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.7",
     "@dword-design/babel-config": "^1.0.8",
     "@dword-design/eslint-config": "^1.2.0",
     "better-node-env": "^1.0.3",
@@ -36,8 +37,6 @@
     "glob-promise": "^3.4.0",
     "output-files": "^1.1.7",
     "sort-package-json": "^1.30.0",
-    "stealthy-require": "^1.1.1",
-    "wait-on": "^3.3.0",
     "with-local-tmp-dir": "^2.2.1"
   },
   "contributors": [

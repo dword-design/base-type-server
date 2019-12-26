@@ -1,10 +1,7 @@
 import { spawn } from 'child-process-promise'
 import withLocalTmpDir from 'with-local-tmp-dir'
-import expect from 'expect'
 import P from 'path'
 import outputFiles from 'output-files'
-import waitOn from 'wait-on'
-import glob from 'glob-promise'
 import sortPackageJson from 'sort-package-json'
 import { endent } from '@dword-design/functions'
 import { outputFile } from 'fs-extra'
@@ -26,7 +23,6 @@ export default () => withLocalTmpDir(__dirname, async () => {
 
         console.log(api)
       `,
-      'foo.txt': '',
       'index.js': 'export default 1',
     },
   })
@@ -37,12 +33,11 @@ export default () => withLocalTmpDir(__dirname, async () => {
       }
     })
     .childProcess
-  await waitOn({ resources: [P.join('dist', 'cli.js'), P.join('dist', 'index.js'), P.join('dist', 'foo.txt')] })
-  expect(await glob('*', { cwd: 'dist', dot: true })).toEqual([
-    'cli.js',
-    'foo.txt',
-    'index.js',
-  ])
+  await new Promise(resolve => childProcess.stdout.on('data', data => {
+    if (data.toString() === '1\n') {
+      resolve()
+    }
+  }))
   await outputFile(P.join('src', 'index.js'), 'export default 1;')
   await new Promise(resolve => childProcess.stdout.on('data', data => {
     if (data.toString().includes('Extra semicolon  semi')) {

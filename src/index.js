@@ -41,13 +41,14 @@ export default {
           debounce(
             async () => {
               try {
-                await build()
+                await lint()
                 if (serverProcess !== undefined) {
                   serverProcess.kill()
                 }
-                serverProcess = spawn('node', ['dist/cli.js'], { stdio: 'inherit' }).childProcess
+                console.log('Starting server …')
+                serverProcess = spawn('babel-node', ['--config-file', getPackageName(require.resolve('@dword-design/babel-config')), 'src/cli.js'], { stdio: 'inherit' }).childProcess
               } catch (error) {
-                if (error.name !== 'ChildProcessError') {
+                if (error.code !== null) {
                   console.log(error)
                 }
               }
