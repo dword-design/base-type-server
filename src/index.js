@@ -20,6 +20,7 @@ const build = async () => {
 
 export default {
   build,
+  gitignore: ['/.eslintrc.json'],
   lint,
   start: async () => {
     if (nodeEnv === 'production') {

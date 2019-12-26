@@ -7,6 +7,7 @@ import glob from 'glob-promise'
 import sortPackageJson from 'sort-package-json'
 import { endent } from '@dword-design/functions'
 import packageConfig from '../package.config'
+import { readFile } from 'fs-extra'
 
 export default () => withLocalTmpDir(__dirname, async () => {
   await outputFiles({
@@ -44,6 +45,7 @@ export default () => withLocalTmpDir(__dirname, async () => {
     'src',
   ])
   expect(require(P.resolve('dist'))).toEqual(2)
+  expect(await readFile('.gitignore', 'utf8')).toMatch('/.eslintrc.json\n')
   expect(stdout).toEqual(endent`
     Copying config files …
     Updating README.md …
