@@ -2,9 +2,6 @@
   "name": "@dword-design/base-config-server",
   "version": "1.2.1",
   "description": "",
-  "bugs": {
-    "url": "https://github.com/dword-design/base-config-server/issues"
-  },
   "repository": "dword-design/base-config-server",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
@@ -36,12 +33,6 @@
     "expect": "^24.9.0",
     "glob-promise": "^3.4.0",
     "output-files": "^1.1.7",
-    "sort-package-json": "^1.30.0",
     "with-local-tmp-dir": "^2.2.1"
-  },
-  "contributors": [
-    "Renovate Bot (http://renovatebot.com)",
-    "dword-design (http://www.dword-design.de)"
-  ],
-  "maintainers": []
+  }
 }
