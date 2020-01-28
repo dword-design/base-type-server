@@ -26,6 +26,7 @@
     "debounce": "^1.2.0",
     "fs-extra": "^8.1.0",
     "get-package-name": "^1.0.0",
+    "tiny-lr": "^1.1.1",
     "tree-kill": "^1.2.2"
   },
   "devDependencies": {

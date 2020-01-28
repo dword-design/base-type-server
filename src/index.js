@@ -5,6 +5,7 @@ import chokidar from 'chokidar'
 import debounce from 'debounce'
 import getPackageName from 'get-package-name'
 import kill from 'tree-kill'
+import livereload from 'tiny-lr'
 
 let serverProcess = undefined
 
@@ -36,6 +37,7 @@ export default {
         }
       }
     } else {
+      livereload().listen()
       return chokidar
         .watch('src')
         .on(
@@ -59,6 +61,7 @@ export default {
                     }
                   })
                   .childProcess
+                
               } catch ({ code, message }) {
                 if (code !== null) {
                   console.log(message)
