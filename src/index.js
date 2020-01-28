@@ -4,6 +4,7 @@ import { outputFile, remove } from 'fs-extra'
 import chokidar from 'chokidar'
 import debounce from 'debounce'
 import getPackageName from 'get-package-name'
+import kill from 'tree-kill'
 
 let serverProcess = undefined
 
@@ -44,13 +45,23 @@ export default {
               try {
                 await lint()
                 if (serverProcess !== undefined) {
-                  serverProcess.kill()
+                  kill(serverProcess.pid)
                 }
                 console.log('Starting server …')
-                serverProcess = spawn('babel-node', ['--config-file', getPackageName(require.resolve('@dword-design/babel-config')), 'src/cli.js'], { stdio: 'inherit' }).childProcess
-              } catch (error) {
-                if (error.code !== null) {
-                  console.log(error)
+                serverProcess = spawn(
+                  'babel-node',
+                  ['--config-file', getPackageName(require.resolve('@dword-design/babel-config')), 'src/cli.js'],
+                  { stdio: 'inherit' },
+                )
+                  .catch(error => {
+                    if (error.code !== null) {
+                      throw error
+                    }
+                  })
+                  .childProcess
+              } catch ({ code, message }) {
+                if (code !== null) {
+                  console.log(message)
                 }
               }
             },
