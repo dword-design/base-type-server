@@ -24,28 +24,32 @@ export default () => withLocalTmpDir(__dirname, async () => {
 
         console.log(api)
       `,
-      'index.js': 'export default 1',
+      'index.js': 'export default 1 |> x => x * 2',
     },
   })
-  const childProcess = spawn('base', ['start'])
+  await spawn('base', ['prepare'])
+  const childProcess = spawn('base', ['dev'])
     .catch(error => {
       if (error.code !== null) {
         throw error
       }
     })
     .childProcess
-  await new Promise(resolve => childProcess.stdout.on('data', data => {
-    if (data.toString() === '1\n') {
-      resolve()
-    }
-  }))
-  childProcess.stdout.removeAllListeners('data')
-  await outputFile(P.join('src', 'index.js'), 'foo bar')
-  await new Promise(resolve => childProcess.stdout.on('data', data => {
-    if (data.toString().includes('Unexpected token, expected ";"')) {
-      resolve()
-    }
-  }))
-  childProcess.stdout.removeAllListeners('data')
-  await childProcess.kill()
+  try {
+    await new Promise(resolve => childProcess.stdout.on('data', data => {
+      if (data.toString() === '2\n') {
+        resolve()
+      }
+    }))
+    childProcess.stdout.removeAllListeners('data')
+    await outputFile(P.join('src', 'index.js'), 'export default \'bar\'')
+    await new Promise(resolve => childProcess.stdout.on('data', data => {
+      if (data.toString() === 'bar\n') {
+        resolve()
+      }
+    }))
+    childProcess.stdout.removeAllListeners('data')
+  } finally {
+    childProcess.kill()
+  }
 })

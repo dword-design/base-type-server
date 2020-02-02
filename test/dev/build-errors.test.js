@@ -27,7 +27,8 @@ export default () => withLocalTmpDir(__dirname, async () => {
       'index.js': 'export default 1',
     },
   })
-  const childProcess = spawn('base', ['start'])
+  await spawn('base', ['prepare'])
+  const childProcess = spawn('base', ['dev'])
     .catch(error => {
       if (error.code !== null) {
         throw error
@@ -39,11 +40,13 @@ export default () => withLocalTmpDir(__dirname, async () => {
       resolve()
     }
   }))
-  await outputFile(P.join('src', 'index.js'), 'export default 1;')
+  childProcess.stdout.removeAllListeners('data')
+  await outputFile(P.join('src', 'index.js'), 'foo bar')
   await new Promise(resolve => childProcess.stdout.on('data', data => {
-    if (data.toString().includes('Extra semicolon  semi')) {
+    if (data.toString().includes('Unexpected token, expected ";"')) {
       resolve()
     }
   }))
+  childProcess.stdout.removeAllListeners('data')
   await childProcess.kill()
 })

@@ -24,31 +24,27 @@ export default () => withLocalTmpDir(__dirname, async () => {
 
         console.log(api)
       `,
-      'index.js': 'export default 1 |> x => x * 2',
+      'index.js': 'export default 1',
     },
   })
-  const childProcess = spawn('base', ['start'])
+  await spawn('base', ['prepare'])
+  const childProcess = spawn('base', ['dev'])
     .catch(error => {
       if (error.code !== null) {
         throw error
       }
     })
     .childProcess
-  try {
-    await new Promise(resolve => childProcess.stdout.on('data', data => {
-      if (data.toString() === '2\n') {
-        resolve()
-      }
-    }))
-    childProcess.stdout.removeAllListeners('data')
-    await outputFile(P.join('src', 'index.js'), 'export default \'bar\'')
-    await new Promise(resolve => childProcess.stdout.on('data', data => {
-      if (data.toString() === 'bar\n') {
-        resolve()
-      }
-    }))
-    childProcess.stdout.removeAllListeners('data')
-  } finally {
-    childProcess.kill()
-  }
+  await new Promise(resolve => childProcess.stdout.on('data', data => {
+    if (data.toString() === '1\n') {
+      resolve()
+    }
+  }))
+  await outputFile(P.join('src', 'index.js'), 'export default 1;')
+  await new Promise(resolve => childProcess.stdout.on('data', data => {
+    if (data.toString().includes('Extra semicolon  semi')) {
+      resolve()
+    }
+  }))
+  await childProcess.kill()
 })
