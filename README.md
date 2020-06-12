@@ -1,52 +1,46 @@
 <!-- TITLE/ -->
-
-<h1>@dword-design/base-config-server</h1>
-
+# @dword-design/base-config-server
 <!-- /TITLE -->
 
 
 <!-- BADGES/ -->
+[![NPM version](https://img.shields.io/npm/v/@dword-design/base-config-server.svg)](https://npmjs.org/package/@dword-design/base-config-server)
+![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
+[![Build status](https://img.shields.io/github/workflow/status/dword-design/base-config-server/build)](https://github.com/dword-design/base-config-server/actions)
+[![Coverage status](https://img.shields.io/coveralls/dword-design/base-config-server)](https://coveralls.io/github/dword-design/base-config-server)
+[![Dependency status](https://img.shields.io/david/dword-design/base-config-server)](https://david-dm.org/dword-design/base-config-server)
+![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen)
 
-<span class="badge-npmversion"><a href="https://npmjs.org/package/@dword-design/base-config-server" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@dword-design/base-config-server.svg" alt="NPM version" /></a></span>
-<span class="badge-travisci"><a href="http://travis-ci.org/dword-design/base-config-server" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/dword-design/base-config-server/master.svg" alt="Travis CI Build Status" /></a></span>
-<span class="badge-coveralls"><a href="https://coveralls.io/r/dword-design/base-config-server" title="View this project's coverage on Coveralls"><img src="https://img.shields.io/coveralls/dword-design/base-config-server.svg" alt="Coveralls Coverage Status" /></a></span>
-<span class="badge-daviddm"><a href="https://david-dm.org/dword-design/base-config-server" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/dword-design/base-config-server.svg" alt="Dependency Status" /></a></span>
-<span class="badge-shields"><a href="https://img.shields.io/badge/renovate-enabled-brightgreen.svg"><img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" /></a></span>
-
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dword-design/base-config-server)
 <!-- /BADGES -->
 
 
 <!-- DESCRIPTION/ -->
 
-
-
 <!-- /DESCRIPTION -->
 
 
 <!-- INSTALL/ -->
+## Install
 
-<h2>Install</h2>
+```bash
+# NPM
+$ npm install @dword-design/base-config-server
 
-<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
-<ul>
-<li>Install: <code>npm install --save @dword-design/base-config-server</code></li>
-<li>Import: <code>import * as pkg from ('@dword-design/base-config-server')</code></li>
-<li>Require: <code>const pkg = require('@dword-design/base-config-server')</code></li>
-</ul>
-
+# Yarn
+$ yarn add @dword-design/base-config-server
+```
 <!-- /INSTALL -->
 
 
 <!-- LICENSE/ -->
-
-<h2>License</h2>
+## License
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; Sebastian Landwehr</li></ul>
+Copyright &copy; Sebastian Landwehr <info@dword-design.de>
 
 and licensed under:
 
-<ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
-
+[MIT License](https://opensource.org/licenses/MIT)
 <!-- /LICENSE -->

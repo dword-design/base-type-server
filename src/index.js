@@ -1,60 +1,36 @@
-import { spawn } from 'child-process-promise'
+import execa from 'execa'
 import chokidar from 'chokidar'
 import debounce from 'debounce'
-import getPackageName from 'get-package-name'
-import kill from 'tree-kill'
+import kill from 'tree-kill-promise'
 import nodeConfig from '@dword-design/base-config-node'
 
-let serverProcess = undefined
+let serverProcess
 
 export default {
-  gitignore: ['/.eslintrc.json'],
+  ...nodeConfig,
+  npmPublish: false,
   commands: {
     ...nodeConfig.commands,
-    dev: () => chokidar
-      .watch('src')
-      .on(
+    dev: () =>
+      chokidar.watch('src').on(
         'all',
-        debounce(
-          async () => {
-            try {
-              await nodeConfig.test()
-              if (serverProcess !== undefined) {
-                kill(serverProcess.pid)
-              }
-              console.log('Starting server …')
-              serverProcess = spawn(
-                'babel-node',
-                ['--config-file', getPackageName(require.resolve('@dword-design/babel-config')), 'src/cli.js'],
-                { stdio: 'inherit' },
-              )
-                .catch(error => {
-                  if (error.code !== null) {
-                    throw error
-                  }
-                })
-                .childProcess
-              
-            } catch ({ code, message }) {
-              if (code !== null) {
-                console.log(message)
-              }
+        debounce(async () => {
+          try {
+            console.log('Linting files …')
+            await nodeConfig.lint()
+            console.log('Starting server …')
+            if (serverProcess) {
+              await kill(serverProcess.pid)
             }
-          },
-          200,
-        ),
+            serverProcess = execa.command('babel-node src/cli.js', {
+              stdio: 'inherit',
+            })
+            console.log('Server is up and running.')
+          } catch (error) {
+            console.log(error.message)
+          }
+        }, 200)
       ),
-    start: async () => {
-      await nodeConfig.commands.prepublishOnly()
-      try {
-        await spawn('forever', ['restart', 'dist/cli.js'], { stdio: 'inherit' })
-      } catch (error) {
-        if (error.name === 'ChildProcessError') {
-          return spawn('forever', ['start', 'dist/cli.js'], { stdio: 'inherit' })
-        } else {
-          throw error
-        }
-      }
-    },
+    start: () => execa.command('node dist/cli.js', { stdio: 'inherit' }),
   },
 }
