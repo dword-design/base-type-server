@@ -1,15 +1,17 @@
 import execa from 'execa'
-import withLocalTmpDir from 'with-local-tmp-dir'
-import P from 'path'
 import outputFiles from 'output-files'
+import P from 'path'
+import withLocalTmpDir from 'with-local-tmp-dir'
 
 export default {
   valid: () =>
     withLocalTmpDir(async () => {
       await outputFiles({
+        'node_modules/base-config-self/index.js':
+          "module.exports = require('../../../src')",
         'package.json': JSON.stringify(
           {
-            baseConfig: require.resolve('.'),
+            baseConfig: 'self',
           },
           undefined,
           2
