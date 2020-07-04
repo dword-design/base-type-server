@@ -1,14 +1,13 @@
-import execa from 'execa'
+import nodeConfig from '@dword-design/base-config-node'
 import chokidar from 'chokidar'
 import debounce from 'debounce'
+import execa from 'execa'
 import kill from 'tree-kill-promise'
-import nodeConfig from '@dword-design/base-config-node'
 
 let serverProcess
 
 export default {
   ...nodeConfig,
-  npmPublish: false,
   commands: {
     ...nodeConfig.commands,
     dev: () =>
@@ -33,4 +32,5 @@ export default {
       ),
     start: () => execa.command('node dist/cli.js', { stdio: 'inherit' }),
   },
+  npmPublish: false,
 }
