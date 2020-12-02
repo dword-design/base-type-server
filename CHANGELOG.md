@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dword-design/base-config-server/compare/v1.0.2...v1.0.3) (2020-12-02)
+
+
+### Bug Fixes
+
+* **config:** Update changed files ([2eebda3](https://github.com/dword-design/base-config-server/commit/2eebda32d1efc36a5970787e3d9b09c18108ba23))
+
 ## [1.0.2](https://github.com/dword-design/base-config-server/compare/v1.0.1...v1.0.2) (2020-08-23)
 
 
