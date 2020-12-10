@@ -33,7 +33,7 @@
     "axios": "^0.20.0",
     "express": "^4.17.1",
     "fs-extra": "^9.0.0",
-    "get-package-name": "^1.1.0",
+    "get-package-name": "^2.0.0",
     "output-files": "^1.1.7",
     "p-wait-for": "^3.1.0",
     "port-ready": "^0.1.0",
