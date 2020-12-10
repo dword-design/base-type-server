@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dword-design/base-config-server/compare/v1.0.4...v1.0.5) (2020-12-10)
+
+
+### Bug Fixes
+
+* replace get-package-name with depcheck-package-name ([8f3c5d9](https://github.com/dword-design/base-config-server/commit/8f3c5d96d8705735bc93abeafc14b5a20a82e547))
+
 ## [1.0.4](https://github.com/dword-design/base-config-server/compare/v1.0.3...v1.0.4) (2020-12-10)
 
 
