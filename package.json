@@ -24,7 +24,7 @@
     "@dword-design/base-config-node": "^1.5.3",
     "chokidar": "^3.3.0",
     "debounce": "^1.2.0",
-    "execa": "^4.0.2",
+    "execa": "^5.0.0",
     "tree-kill-promise": "^1.0.1"
   },
   "devDependencies": {
