@@ -1,8 +1,8 @@
 import { endent, property } from '@dword-design/functions'
 import axios from 'axios'
+import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import { outputFile } from 'fs-extra'
-import getPackageName from 'get-package-name'
 import outputFiles from 'output-files'
 import pWaitFor from 'p-wait-for'
 import P from 'path'
@@ -20,7 +20,7 @@ export default {
           {
             baseConfig: 'self',
             dependencies: {
-              [getPackageName(require.resolve('express'))]: '^1.0.0',
+              [packageName`express`]: '^1.0.0',
             },
           },
           undefined,
@@ -70,7 +70,7 @@ export default {
           {
             baseConfig: 'self',
             dependencies: {
-              [getPackageName(require.resolve('express'))]: '^1.0.0',
+              [packageName`express`]: '^1.0.0',
             },
           },
           undefined,
@@ -129,7 +129,7 @@ export default {
           {
             baseConfig: 'self',
             dependencies: {
-              [getPackageName(require.resolve('express'))]: '^1.0.0',
+              [packageName`express`]: '^1.0.0',
             },
           },
           undefined,
