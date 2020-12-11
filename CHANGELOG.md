@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/dword-design/base-config-server/compare/v1.0.5...v1.0.6) (2020-12-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([91b4ad4](https://github.com/dword-design/base-config-server/commit/91b4ad42b1df04164ae3dbee6afd64bede0e7c6d))
+
 ## [1.0.5](https://github.com/dword-design/base-config-server/compare/v1.0.4...v1.0.5) (2020-12-10)
 
 
