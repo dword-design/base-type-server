@@ -51,7 +51,13 @@ export default {
         await outputFile(P.join('src', 'index.js'), 'foo bar')
         await new Promise(resolve =>
           childProcess.stdout.on('data', data => {
-            if (data.toString().includes(`${P.join('src', 'index.js')}: Missing semicolon (1:3)`)) {
+            if (
+              data
+                .toString()
+                .includes(
+                  `${P.join('src', 'index.js')}: Missing semicolon (1:3)`
+                )
+            ) {
               resolve()
             }
           })
