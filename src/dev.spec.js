@@ -51,7 +51,7 @@ export default {
         await outputFile(P.join('src', 'index.js'), 'foo bar')
         await new Promise(resolve =>
           childProcess.stdout.on('data', data => {
-            if (data.toString().includes('Unexpected token, expected ";"')) {
+            if (data.toString().includes(`${P.join('src', 'index.js')}: Missing semicolon (1:3)`)) {
               resolve()
             }
           })
@@ -154,7 +154,7 @@ export default {
         },
       })
       await execa.command('base prepare')
-      const childProcess = execa.command('base dev')
+      const childProcess = execa.command('base dev', { stdio: 'inherit' })
       try {
         await portReady(3000)
         expect(
