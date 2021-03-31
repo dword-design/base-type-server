@@ -45,6 +45,7 @@ export default {
         },
       })
       await execa.command('base prepare')
+
       const childProcess = execa.command('base dev')
       try {
         await portReady(3000)
@@ -101,6 +102,7 @@ export default {
         },
       })
       await execa.command('base prepare')
+
       const childProcess = execa.command('base dev')
       try {
         await portReady(3000)
@@ -160,6 +162,7 @@ export default {
         },
       })
       await execa.command('base prepare')
+
       const childProcess = execa.command('base dev', { stdio: 'inherit' })
       try {
         await portReady(3000)
