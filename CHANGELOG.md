@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/dword-design/base-config-server/compare/v1.0.11...v1.0.12) (2021-04-12)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#49](https://github.com/dword-design/base-config-server/issues/49)) ([51caad9](https://github.com/dword-design/base-config-server/commit/51caad9c4104ae538bc30e7191387e93283d416e))
+
 ## [1.0.11](https://github.com/dword-design/base-config-server/compare/v1.0.10...v1.0.11) (2021-03-31)
 
 
