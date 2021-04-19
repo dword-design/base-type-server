@@ -1074,7 +1074,7 @@
     find-up "^5.0.0"
     param-case "^3.0.3"
 
-"@dword-design/base-config-node@^1.5.3", "@dword-design/base-config-node@^1.6.0":
+"@dword-design/base-config-node@^1.6.0":
   version "1.9.9"
   resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.9.9.tgz#e58fbd1fe29aee2c1cf7c6cd47ccd2d38f809c3a"
   integrity sha512-YNaCx1mmeEQ8JoGbGeo56cLpUzaQDnDMZTRXFLq8ZFcF18axdZzoHR3prn07/Pg7f1hURojIYjG3Gl5E9UTFAg==
@@ -1088,6 +1088,24 @@
     delete-empty "^3.0.0"
     depcheck-package-name "^1.0.0"
     eslint "~7.23.0"
+    execa "^5.0.0"
+    fs-extra "^9.0.0"
+    micromatch "^4.0.2"
+
+"@dword-design/base-config-node@^1.9.9":
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-1.9.10.tgz#426be9c386de599bd27826e0822cd7b7a56be025"
+  integrity sha512-jN9zyqVj37tY1xjZNMfibRwxDr91GvDkrxjnhsohkNL7FGoGNKhAuljCcxlFT8RBJRLYHtUWfgvyI9i+XQr4Wg==
+  dependencies:
+    "@babel/cli" "^7.7.5"
+    "@babel/core" "^7.7.5"
+    "@dword-design/eslint-config" "^1.9.0"
+    "@dword-design/functions" "^3.0.0"
+    chokidar "^3.4.0"
+    debounce "^1.2.0"
+    delete-empty "^3.0.0"
+    depcheck-package-name "^1.0.0"
+    eslint "~7.24.0"
     execa "^5.0.0"
     fs-extra "^9.0.0"
     micromatch "^4.0.2"
@@ -3631,6 +3649,49 @@ eslint@~7.23.0:
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.23.0.tgz#8d029d252f6e8cf45894b4bee08f5493f8e94325"
   integrity sha512-kqvNVbdkjzpFy0XOszNwjkKzZ+6TcwCQ/h+ozlcIWwaimBBuhlQ4nN6kbiM2L+OjDcznkTJxzYfRFH92sx4a0Q==
+  dependencies:
+    "@babel/code-frame" "7.12.11"
+    "@eslint/eslintrc" "^0.4.0"
+    ajv "^6.10.0"
+    chalk "^4.0.0"
+    cross-spawn "^7.0.2"
+    debug "^4.0.1"
+    doctrine "^3.0.0"
+    enquirer "^2.3.5"
+    eslint-scope "^5.1.1"
+    eslint-utils "^2.1.0"
+    eslint-visitor-keys "^2.0.0"
+    espree "^7.3.1"
+    esquery "^1.4.0"
+    esutils "^2.0.2"
+    file-entry-cache "^6.0.1"
+    functional-red-black-tree "^1.0.1"
+    glob-parent "^5.0.0"
+    globals "^13.6.0"
+    ignore "^4.0.6"
+    import-fresh "^3.0.0"
+    imurmurhash "^0.1.4"
+    is-glob "^4.0.0"
+    js-yaml "^3.13.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.4.1"
+    lodash "^4.17.21"
+    minimatch "^3.0.4"
+    natural-compare "^1.4.0"
+    optionator "^0.9.1"
+    progress "^2.0.0"
+    regexpp "^3.1.0"
+    semver "^7.2.1"
+    strip-ansi "^6.0.0"
+    strip-json-comments "^3.1.0"
+    table "^6.0.4"
+    text-table "^0.2.0"
+    v8-compile-cache "^2.0.3"
+
+eslint@~7.24.0:
+  version "7.24.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.24.0.tgz#2e44fa62d93892bfdb100521f17345ba54b8513a"
+  integrity sha512-k9gaHeHiFmGCDQ2rEfvULlSLruz6tgfA8DEn+rY9/oYPFFTlz55mM/Q/Rij1b2Y42jwZiK3lXvNTw6w6TXzcKQ==
   dependencies:
     "@babel/code-frame" "7.12.11"
     "@eslint/eslintrc" "^0.4.0"
