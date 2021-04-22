@@ -1,6 +1,7 @@
 {
   "name": "@dword-design/base-config-server",
   "version": "1.0.13",
+  "description": "",
   "repository": "dword-design/base-config-server",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
