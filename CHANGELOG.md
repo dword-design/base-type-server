@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/dword-design/base-config-server/compare/v1.0.14...v1.0.15) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#58](https://github.com/dword-design/base-config-server/issues/58)) ([08a16f7](https://github.com/dword-design/base-config-server/commit/08a16f7d5ce78323cde57c8238d5d41fe1bea060))
+
 ## [1.0.14](https://github.com/dword-design/base-config-server/compare/v1.0.13...v1.0.14) (2021-04-22)
 
 
