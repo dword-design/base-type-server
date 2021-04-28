@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/dword-design/base-config-server/compare/v1.0.15...v1.0.16) (2021-04-28)
+
+
+### Bug Fixes
+
+* updated package.json[description] ([#61](https://github.com/dword-design/base-config-server/issues/61)) ([3afb3bb](https://github.com/dword-design/base-config-server/commit/3afb3bbfd689eb735e4d9b24e4d7589873286940))
+
 ## [1.0.15](https://github.com/dword-design/base-config-server/compare/v1.0.14...v1.0.15) (2021-04-26)
 
 
