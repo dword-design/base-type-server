@@ -22,14 +22,15 @@
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.7",
     "@dword-design/base-config-node": "^1.5.3",
+    "@dword-design/functions": "^3.0.0",
     "chokidar": "^3.3.0",
     "debounce": "^1.2.0",
     "execa": "^5.0.0",
+    "std-env": "^2.3.0",
     "tree-kill-promise": "^1.0.1"
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.0",
-    "@dword-design/functions": "^3.0.0",
     "axios": "^0.21.0",
     "depcheck-package-name": "^1.0.0",
     "express": "^4.17.1",
