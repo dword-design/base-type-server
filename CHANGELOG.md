@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/dword-design/base-config-server/compare/v1.0.17...v1.0.18) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#64](https://github.com/dword-design/base-config-server/issues/64)) ([3aacea5](https://github.com/dword-design/base-config-server/commit/3aacea5e7ac337074dfb32ec89d974b9f8f43af7))
+
 ## [1.0.17](https://github.com/dword-design/base-config-server/compare/v1.0.16...v1.0.17) (2021-05-03)
 
 
