@@ -22,7 +22,7 @@
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.7",
     "@dword-design/base-config-node": "^1.5.3",
-    "@dword-design/functions": "^3.0.0",
+    "@dword-design/functions": "^4.0.0",
     "chokidar": "^3.3.0",
     "debounce": "^1.2.0",
     "execa": "^5.0.0",
