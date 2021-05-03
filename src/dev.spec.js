@@ -56,7 +56,7 @@ export default {
               data
                 .toString()
                 .includes(
-                  `${P.join('src', 'index.js')}: Missing semicolon (1:3)`
+                  `${P.join('src', 'index.js')}: Missing semicolon. (1:3)`
                 )
             ) {
               resolve()
