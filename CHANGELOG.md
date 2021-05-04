@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/dword-design/base-config-server/compare/v1.0.19...v1.0.20) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v10 ([#67](https://github.com/dword-design/base-config-server/issues/67)) ([8fefd22](https://github.com/dword-design/base-config-server/commit/8fefd223ba5d6e65844708a9672ac719462eb1e6))
+
 ## [1.0.19](https://github.com/dword-design/base-config-server/compare/v1.0.18...v1.0.19) (2021-05-04)
 
 
