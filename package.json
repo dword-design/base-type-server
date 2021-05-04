@@ -27,7 +27,7 @@
     "debounce": "^1.2.0",
     "execa": "^5.0.0",
     "std-env": "^2.3.0",
-    "tree-kill-promise": "^1.0.1"
+    "tree-kill-promise": "^2.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
