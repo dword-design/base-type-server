@@ -1,3 +1,14 @@
+## [1.0.19](https://github.com/dword-design/base-config-server/compare/v1.0.18...v1.0.19) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#65](https://github.com/dword-design/base-config-server/issues/65)) ([43f8e1a](https://github.com/dword-design/base-config-server/commit/43f8e1a4a9d4ac40e206c8a4ae76c2a1c895e5d6))
+* update dependency depcheck-package-name to v2 ([#66](https://github.com/dword-design/base-config-server/issues/66)) ([c835472](https://github.com/dword-design/base-config-server/commit/c83547242d35be2cc9d3d15a0a82e28a825856f5))
+* update dependency output-files to v2 ([#68](https://github.com/dword-design/base-config-server/issues/68)) ([b768c6c](https://github.com/dword-design/base-config-server/commit/b768c6c7fa0e0dcde7d1e58383cc07d54659a594))
+* update dependency tree-kill-promise to v2 ([#69](https://github.com/dword-design/base-config-server/issues/69)) ([b9ec879](https://github.com/dword-design/base-config-server/commit/b9ec87931e5b48a2f8d12059ea37ba630c9d35bc))
+* update dependency with-local-tmp-dir to v4 ([#70](https://github.com/dword-design/base-config-server/issues/70)) ([f52226f](https://github.com/dword-design/base-config-server/commit/f52226f852492a25daf78d5dd1d4a5450e4ac121))
+
 ## [1.0.18](https://github.com/dword-design/base-config-server/compare/v1.0.17...v1.0.18) (2021-05-03)
 
 
