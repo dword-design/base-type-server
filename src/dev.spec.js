@@ -55,9 +55,7 @@ export default {
             if (
               data
                 .toString()
-                .includes(
-                  `${P.join('src', 'index.js')}: Missing semicolon. (1:3)`
-                )
+                .includes('Parsing error: Missing semicolon. (1:3)')
             ) {
               resolve()
             }
