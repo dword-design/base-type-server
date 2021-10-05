@@ -1,3 +1,10 @@
+## [1.0.25](https://github.com/dword-design/base-config-server/compare/v1.0.24...v1.0.25) (2021-10-05)
+
+
+### Bug Fixes
+
+* update dependency axios to ^0.22.0 ([7453d6a](https://github.com/dword-design/base-config-server/commit/7453d6a4c6bc200822712bc42fb4316a54f46a8e))
+
 ## [1.0.24](https://github.com/dword-design/base-config-server/compare/v1.0.23...v1.0.24) (2021-07-20)
 
 
