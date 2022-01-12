@@ -1,3 +1,10 @@
+## [1.0.27](https://github.com/dword-design/base-config-server/compare/v1.0.26...v1.0.27) (2022-01-12)
+
+
+### Bug Fixes
+
+* update config files ([973e3a4](https://github.com/dword-design/base-config-server/commit/973e3a4f17154c693ea2118580cd09f336fe349d))
+
 ## [1.0.26](https://github.com/dword-design/base-config-server/compare/v1.0.25...v1.0.26) (2022-01-04)
 
 
