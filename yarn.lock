@@ -7777,12 +7777,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-p-timeout@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-3.2.0.tgz#c7e17abc971d2a7962ef83626b35d635acf23dfe"
-  integrity sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==
-  dependencies:
-    p-finally "^1.0.0"
+p-timeout@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-6.0.0.tgz#84c210f5500da1af4c31ab2768d794e5e081dd91"
+  integrity sha512-5iS61MOdUMemWH9CORQRxVXTp9g5K8rPnI9uQpo97aWgsH3vVXKjkIhDi+OgIDmN3Ly9+AZ2fZV01Wut1yzfKA==
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -7799,12 +7797,12 @@ p-wait-for@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-wait-for/-/p-wait-for-1.0.0.tgz#874dd6418abef2a1990520409a4bb6b0621f8b90"
   integrity sha1-h03WQYq+8qGZBSBAmku2sGIfi5A=
 
-p-wait-for@^3.1.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/p-wait-for/-/p-wait-for-3.2.0.tgz#640429bcabf3b0dd9f492c31539c5718cb6a3f1f"
-  integrity sha512-wpgERjNkLrBiFmkMEjuZJEWKKDrNfHCKA1OhyN1wg1FrLkULbviEy6py1AyJUgZ72YWFbZ38FIpnqvVqAlDUwA==
+p-wait-for@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/p-wait-for/-/p-wait-for-5.0.0.tgz#67e0f7e83969f7e0da59f6f0b9fd38452eb8dbd5"
+  integrity sha512-nkxeZInKET8e78NTtqBgxpnxDLbiCiQnGdoTnkLkluovfTyI5UTCrGwPNOr6ewJ90NpWyxEFt1ToZ96LmIXXHQ==
   dependencies:
-    p-timeout "^3.0.0"
+    p-timeout "^6.0.0"
 
 package-hash@^4.0.0:
   version "4.0.0"
