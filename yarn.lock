@@ -9151,6 +9151,11 @@ std-env@^2.3.0:
   dependencies:
     ci-info "^3.1.1"
 
+std-env@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.0.0.tgz#8dbd16bd2aadc18992072e2f5839e897f4ee2733"
+  integrity sha512-GoFEqAGzhaexp/T01rIiLOK9LHa6HmVwEUyeU4cwdSnOhfxpw9IMeAFi44SHWbCErEs29qEh7vAOUbtUmoycjA==
+
 stream-combiner2@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stream-combiner2/-/stream-combiner2-1.1.1.tgz#fb4d8a1420ea362764e21ad4780397bebcb41cbe"
