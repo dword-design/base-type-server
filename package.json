@@ -30,7 +30,7 @@
     "tree-kill-promise": "^2.0.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^8.0.0",
+    "@dword-design/base": "^9.0.0",
     "axios": "^0.22.0",
     "depcheck-package-name": "^2.0.0",
     "express": "^4.17.1",
