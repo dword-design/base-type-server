@@ -3,7 +3,6 @@ import { property } from '@dword-design/functions'
 import chokidar from 'chokidar'
 import debounce from 'debounce'
 import execa from 'execa'
-import stdEnv from 'std-env'
 import kill from 'tree-kill-promise'
 
 let serverProcess
@@ -14,7 +13,7 @@ export default {
     ...nodeConfig.commands,
     dev: options => {
       options = {
-        log: !stdEnv.test,
+        log: process.env.NODE_ENV !== 'test',
         resolvePluginsRelativeTo: require.resolve(
           '@dword-design/eslint-config'
         ),

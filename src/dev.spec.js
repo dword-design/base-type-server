@@ -1,7 +1,7 @@
 import { endent, property } from '@dword-design/functions'
 import axios from 'axios'
 import packageName from 'depcheck-package-name'
-import execa from 'execa'
+import { execaCommand } from 'execa'
 import { outputFile } from 'fs-extra'
 import outputFiles from 'output-files'
 import pWaitFor from 'p-wait-for'
@@ -44,9 +44,9 @@ export default {
           `,
         },
       })
-      await execa.command('base prepare')
+      await execaCommand('base prepare')
 
-      const childProcess = execa.command('base dev')
+      const childProcess = execaCommand('base dev')
       try {
         await portReady(3000)
         await outputFile(P.join('src', 'index.js'), 'foo bar')
@@ -99,9 +99,9 @@ export default {
           `,
         },
       })
-      await execa.command('base prepare')
+      await execaCommand('base prepare')
 
-      const childProcess = execa.command('base dev')
+      const childProcess = execaCommand('base dev')
       try {
         await portReady(3000)
         await outputFile(
@@ -159,9 +159,9 @@ export default {
           `,
         },
       })
-      await execa.command('base prepare')
+      await execaCommand('base prepare')
 
-      const childProcess = execa.command('base dev', { stdio: 'inherit' })
+      const childProcess = execaCommand('base dev', { stdio: 'inherit' })
       try {
         await portReady(3000)
         expect(
