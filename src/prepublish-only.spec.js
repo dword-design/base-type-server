@@ -1,25 +1,26 @@
-import execa from 'execa'
+import { Base } from '@dword-design/base'
+import tester from '@dword-design/tester'
+import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import outputFiles from 'output-files'
 import P from 'path'
-import withLocalTmpDir from 'with-local-tmp-dir'
+import fs from 'fs-extra'
 
-export default {
-  valid: () =>
-    withLocalTmpDir(async () => {
+import config from './index.js'
+
+export default tester(
+  {
+    async valid() {
       await outputFiles({
-        'node_modules/base-config-self/index.js':
-          "module.exports = require('../../../src')",
-        'package.json': JSON.stringify(
-          {
-            baseConfig: 'self',
-          },
-          undefined,
-          2
-        ),
         'src/index.js': 'export default 1 |> x => x * 2',
       })
-      await execa.command('base prepare')
-      await execa.command('base prepublishOnly')
-      expect(require(P.resolve('dist'))).toEqual(2)
-    }),
-}
+
+      const base = new Base({ name: P.resolve('..', 'src', 'index.js') })
+      await base.prepare()
+      await config.commands.prepublishOnly()
+      expect(await fs.readFile(P.join('dist', 'index.js'), 'utf8')).toMatchSnapshot(
+        this
+      )
+    },
+  },
+  [testerPluginTmpDir()]
+)
