@@ -5,6 +5,7 @@ import dev from './dev.js'
 
 export default config => {
   const nodeConfig = getNodeConfig(config)
+
   return {
     ...nodeConfig,
     commands: {
