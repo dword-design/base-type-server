@@ -15,32 +15,25 @@ export default tester(
   {
     'build errors': async () => {
       await outputFiles({
-        'package.json': JSON.stringify(
-          {
-            baseConfig: P.resolve('..', 'src', 'index.js'),
-            dependencies: {
-              [packageName`express`]: '^1.0.0',
-            },
+        'package.json': JSON.stringify({
+          baseConfig: P.resolve('..', 'src', 'index.js'),
+          dependencies: {
+            [packageName`express`]: '^1.0.0',
           },
-          undefined,
-          2
-        ),
+        }),
         src: {
           'cli.js': endent`
-          #!/usr/bin/env node
+            #!/usr/bin/env node
 
-          import express from 'express'
-          import result from '.'
+            import express from 'express'
+            import result from './index.js'
 
-          express()
-            .get('/', (req, res) => res.send({ result }))
-            .listen(3000)
+            express()
+              .get('/', (req, res) => res.send({ result }))
+              .listen(3000)
 
-        `,
-          'index.js': endent`
-          export default 1
-
-        `,
+          `,
+          'index.js': 'export default 1',
         },
       })
       await execaCommand('base prepare')
@@ -58,7 +51,7 @@ export default tester(
             ) {
               resolve()
             }
-          })
+          }),
         )
         childProcess.stdout.removeAllListeners('data')
       } finally {
@@ -67,32 +60,25 @@ export default tester(
     },
     'linting errors': async () => {
       await outputFiles({
-        'package.json': JSON.stringify(
-          {
-            baseConfig: P.resolve('..', 'src', 'index.js'),
-            dependencies: {
-              [packageName`express`]: '^1.0.0',
-            },
+        'package.json': JSON.stringify({
+          baseConfig: P.resolve('..', 'src', 'index.js'),
+          dependencies: {
+            [packageName`express`]: '^1.0.0',
           },
-          undefined,
-          2
-        ),
+        }),
         src: {
           'cli.js': endent`
-          #!/usr/bin/env node
+            #!/usr/bin/env node
 
-          import express from 'express'
-          import result from '.'
+            import express from 'express'
+            import result from './index.js'
 
-          express()
-            .get('/', (req, res) => res.send({ result }))
-            .listen(3000)
+            express()
+              .get('/', (req, res) => res.send({ result }))
+              .listen(3000)
 
-        `,
-          'index.js': endent`
-          export default 1
-
-        `,
+          `,
+          'index.js': 'export default 1',
         },
       })
       await execaCommand('base prepare')
@@ -100,13 +86,7 @@ export default tester(
       const childProcess = execaCommand('base dev')
       try {
         await portReady(3000)
-        await outputFile(
-          P.join('src', 'index.js'),
-          endent`
-        var foo = 'bar'
-
-      `
-        )
+        await outputFile(P.join('src', 'index.js'), "var foo = 'bar'")
         await new Promise(resolve =>
           childProcess.stdout.on('data', data => {
             if (
@@ -116,7 +96,7 @@ export default tester(
             ) {
               resolve()
             }
-          })
+          }),
         )
       } finally {
         await kill(childProcess.pid)
@@ -124,49 +104,38 @@ export default tester(
     },
     valid: async () => {
       await outputFiles({
-        'package.json': JSON.stringify(
-          {
-            baseConfig: P.resolve('..', 'src', 'index.js'),
-            dependencies: {
-              [packageName`express`]: '^1.0.0',
-            },
+        'package.json': JSON.stringify({
+          baseConfig: P.resolve('..', 'src', 'index.js'),
+          dependencies: {
+            [packageName`express`]: '^1.0.0',
           },
-          undefined,
-          2
-        ),
+        }),
         src: {
           'cli.js': endent`
-          #!/usr/bin/env node
+            #!/usr/bin/env node
 
-          import express from 'express'
-          import result from '.'
+            import express from 'express'
+            import result from './index.js'
 
-          express()
-            .get('/', (req, res) => res.send({ result }))
-            .listen(3000)
+            express()
+              .get('/', (req, res) => res.send({ result }))
+              .listen(3000)
 
-        `,
-          'index.js': endent`
-          export default 1
-
-        `,
+          `,
+          'index.js': 'export default 1',
         },
       })
       await execaCommand('base prepare')
 
-      const childProcess = execaCommand('base dev', { stdio: 'inherit' })
+      const childProcess = execaCommand('base dev')
       try {
         await portReady(3000)
         expect(
-          axios.get('http://localhost:3000') |> await |> property('data.result')
+          axios.get('http://localhost:3000')
+            |> await
+            |> property('data.result'),
         ).toEqual(1)
-        await outputFile(
-          P.join('src', 'index.js'),
-          endent`
-        export default 2
-
-      `
-        )
+        await outputFile(P.join('src', 'index.js'), 'export default 2')
         await pWaitFor(
           async () => {
             try {
@@ -180,12 +149,12 @@ export default tester(
               return false
             }
           },
-          { interval: 300 }
+          { interval: 300 },
         )
       } finally {
         await kill(childProcess.pid)
       }
     },
   },
-  [testerPluginTmpDir()]
+  [testerPluginTmpDir()],
 )

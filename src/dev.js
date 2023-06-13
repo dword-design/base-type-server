@@ -34,7 +34,7 @@ export default options => {
                 options.resolvePluginsRelativeTo,
                 '.',
               ],
-              options.log ? { stdio: 'inherit' } : { all: true }
+              options.log ? { stdio: 'inherit' } : { all: true },
             )
             |> await
             |> property('all')
@@ -52,6 +52,6 @@ export default options => {
       } catch (error) {
         console.log(error.message)
       }
-    }, 200)
+    }, 200),
   )
 }
