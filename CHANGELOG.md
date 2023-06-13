@@ -1,3 +1,10 @@
+## [1.0.28](https://github.com/dword-design/base-config-server/compare/v1.0.27...v1.0.28) (2023-06-08)
+
+
+### Bug Fixes
+
+* update dependency @babel/core to v7.22.5 ([5b47961](https://github.com/dword-design/base-config-server/commit/5b4796191f1e476dd96a0b11018795900b62b174))
+
 ## [1.0.27](https://github.com/dword-design/base-config-server/compare/v1.0.26...v1.0.27) (2022-01-12)
 
 
