@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prepublish-only valid 1`] = `
+"var _;
+export default (_ = 1, _ * 2);"
+`;
