@@ -1,5 +1,6 @@
 import nodeConfig from '@dword-design/base-config-node'
 import { execaCommand } from 'execa'
+
 import dev from './dev.js'
 
 export default {

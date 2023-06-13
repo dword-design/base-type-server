@@ -9,9 +9,7 @@ let serverProcess
 export default options => {
   options = {
     log: process.env.NODE_ENV !== 'test',
-    resolvePluginsRelativeTo: require.resolve(
-      '@dword-design/eslint-config'
-    ),
+    resolvePluginsRelativeTo: require.resolve('@dword-design/eslint-config'),
     ...options,
   }
 
