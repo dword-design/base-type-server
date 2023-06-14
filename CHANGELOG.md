@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/dword-design/base-config-server/compare/v1.0.28...v2.0.0) (2023-06-14)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#121](https://github.com/dword-design/base-config-server/issues/121)) ([284e09a](https://github.com/dword-design/base-config-server/commit/284e09a567c0ceff6669e93a132511057bf7b225))
+
+
+### BREAKING CHANGES
+
+* drop node 12 and 14, esm
+
 ## [1.0.28](https://github.com/dword-design/base-config-server/compare/v1.0.27...v1.0.28) (2023-06-08)
 
 
